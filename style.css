@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+}
+
+*::selection{
+    background-color: #000;
+    color: #b078ff;
+}
+
+body{
+    background-color: #111;
+    color: #fff;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container header{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container header h1{
+    margin: 10px 0;
+}
+
+.container header p{
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 650;
+    color: #fff;
+    transition: 0.5s;
+}
+
+input:hover{
+    transform: scale(1.05);
+    background-color: #555;
+    border:2px solid #ffffff97;
+}
+
+body:has(.title:hover) #price,
+body:has(.title:hover) .taxes,
+body:has(.title:hover) .ads,
+body:has(.title:hover) .discount,
+body:has(.title:hover) .count,
+body:has(.title:hover) .category,
+
+body:has(.title:focus) #price,
+body:has(.title:focus) .taxes,
+body:has(.title:focus) .ads,
+body:has(.title:focus) .discount,
+body:has(.title:focus) .count,
+body:has(.title:focus) .category,
+
+
+body:has(#price:hover) .title,
+body:has(#price:hover) .taxes,
+body:has(#price:hover) .ads,
+body:has(#price:hover) .discount,
+body:has(#price:hover) .count,
+body:has(#price:hover) .category,
+
+body:has(#price:focus) .title,
+body:has(#price:focus) .taxes,
+body:has(#price:focus) .ads,
+body:has(#price:focus) .discount,
+body:has(#price:focus) .count,
+body:has(#price:focus) .category,
+
+
+body:has(.taxes:hover) .title,
+body:has(.taxes:hover) #price,
+body:has(.taxes:hover) .ads,
+body:has(.taxes:hover) .discount,
+body:has(.taxes:hover) .count,
+body:has(.taxes:hover) .category,
+
+body:has(.taxes:focus) .title,
+body:has(.taxes:focus) #price,
+body:has(.taxes:focus) .ads,
+body:has(.taxes:focus) .discount,
+body:has(.taxes:focus) .count,
+body:has(.ads:focus) .category,
+
+
+body:has(.ads:hover) .title,
+body:has(.ads:hover) #price,
+body:has(.ads:hover) .taxes,
+body:has(.ads:hover) .discount,
+body:has(.ads:hover) .count,
+body:has(.ads:hover) .category,
+
+body:has(.ads:focus) .title,
+body:has(.ads:focus) #price,
+body:has(.ads:focus) .taxes,
+body:has(.ads:focus) .discount,
+body:has(.ads:focus) .count,
+body:has(.ads:focus) .category,
+
+body:has(.discount:hover) .title,
+body:has(.discount:hover) #price,
+body:has(.discount:hover) .taxes,
+body:has(.discount:hover) .ads,
+body:has(.discount:hover) .count,
+body:has(.discount:hover) .category,
+
+body:has(.discount:focus) .title,
+body:has(.discount:focus) #price,
+body:has(.discount:focus) .taxes,
+body:has(.discount:focus) .ads,
+body:has(.discount:focus) .count,
+body:has(.discount:focus) .category,
+
+
+body:has(.count:hover) .title,
+body:has(.count:hover) #price,
+body:has(.count:hover) .taxes,
+body:has(.count:hover) .ads,
+body:has(.count:hover) .discount,
+body:has(.count:hover) .category,
+
+body:has(.count:focus) #price,
+body:has(.count:focus) .title,
+body:has(.count:focus) .taxes,
+body:has(.count:focus) .ads,
+body:has(.count:focus) .discount,
+body:has(.count:focus) .category,
+
+
+body:has(.category:hover) .title,
+body:has(.category:hover) #price,
+body:has(.category:hover) .taxes,
+body:has(.category:hover) .ads,
+body:has(.category:hover) .discount,
+body:has(.category:hover) .count,
+
+body:has(.category:focus) #price,
+body:has(.category:focus) .title,
+body:has(.category:focus) .taxes,
+body:has(.category:focus) .ads,
+body:has(.category:focus) .discount,
+body:has(.category:focus) .count{
+    background-color: #1d1d1d;
+}
+
+input:focus{
+    transform: scale(1.1);
+    cursor: text;
+    border:2px solid #ffffff97;
+    background-color: #b078ff5d;
+}
+
+.container .inputs .price input{
+    width: 20%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.container .inputs .price small{
+    background-color: #ff3939;
+    font-weight: 500;
+    padding: 16px;
+}
+
+.container .inputs .price small::before{
+    content: "Total: ";
+}
+
+button{
+    margin: 10px 0 0 11px;
+    background-color: #441b7c;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: large;
+    transform: scale(1.015);
+    transition: 0.5s;
+}
+
+.container .inputs .create:hover{
+    height: 50px;
+    letter-spacing: 3px;
+    background-color: #a769ff;
+}
+
+.container .outputs{
+    margin-top: 10px;
+}
+
+.container .outputs .search{
+    display: none;
+}
+
+.container .outputs .buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .outputs .back{
+    margin-top: 20px;
+    display: none;
+}
+
+.container .outputs .buttons button{
+    width: 45%;
+}
+
+.container .outputs .buttons button:hover{
+    width: 55%;
+    background-color: #cfacff;
+    letter-spacing: 3px;
+}
+
+.container .outputs table{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container .outputs table button{
+    width: 100px;
+}
+
+.container .outputs table button:hover{
+    background-color: #cfacff;
+    letter-spacing: 3px;
+}
+
+.container .outputs table thead{
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.container .outputs .deleteAll{
+    margin: 10px 0;
+}
+
+
+
+
+
+@media (min-width: 1000px) and (max-width: 1360px){
+    .container .inputs .price .taxes,
+    .container .inputs .price small{
+        margin-left: 0px;
+    }
+    .container .inputs .price input{
+    width: 18%;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 999px){
+    .container .inputs .price .taxes,
+    .container .inputs .price small{
+        margin-left: 0px;
+    }
+    .container .inputs .price input{
+    width: 17%;
+    }
+}
+
+@media (min-width: 580px) and (max-width: 849px){
+    .container .inputs .price .taxes,
+    .container .inputs .price small{
+        margin-left: 0px;
+    }
+    .container .inputs .price input{
+    width: 13%;
+    }
+}
+
+@media (max-width: 580px){
+    .container .inputs .price{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .inputs .price #price,
+    .container .inputs .price .taxes,
+    .container .inputs .price .ads,
+    .container .inputs .price .discount,
+    .container .inputs .price small{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .container .outputs .buttons button:hover{
+        width: 55%;
+        background-color: #cfacff;
+        letter-spacing: 1px;
+    }
+    
+    .container .outputs table{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .container .outputs table button{
+        width: 50px;
+    }
+    
+    .container .outputs table button:hover{
+        background-color: #cfacff;
+        letter-spacing: 3px;
+    }
+    
+    .container .outputs table thead{
+        text-transform: uppercase;
+        padding: 10px;
+    }
+
+    .container .outputs table thead tr th{
+        font-size: 0.5em;
+    }
+
+    .container .outputs table tbody{
+        font-size: 0.5em;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <header>
+            <h1>CRUDS</h1>
+            <p>create read update delete search</p>
+        </header>
+        <div class="inputs" id="inputs">
+            <input type="text" name="title" id="title" class="title" placeholder="title" required>
+            <div class="price">
+                <input type="number" onkeyup="getTotal()" name="price" id="price" placeholder="price" min="0" required>
+                <input type="number" onkeyup="getTotal()" name="taxes" class="taxes" id="taxes" placeholder="taxes" min="0">
+                <input type="number" onkeyup="getTotal()" name="ads" class="ads" id="ads" placeholder="ads" min="0">
+                <input type="number" onkeyup="getTotal()" name="discount" class="discount" id="discount" placeholder="discount" min="0">
+                <small id="total"></small>
+            </div>
+            <input type="number" name="count" id="count" class="count" placeholder="count" required>
+            <input type="text" name="category" id="category" class="category" placeholder="category" required>
+            <button id="create" class="create">create</button>
+        </div>
+        <div class="outputs" id="outputs">
+            <input type="text" onkeyup="searchData(this.value)" name="search" id="search" class="search" placeholder="search">
+            <div class="buttons">
+                <button class="searchTitle" onclick="searchBy(this.id)" id="searchTitle">search by title</button>
+                <button class="searchCategory" onclick="searchBy(this.id)" id="searchCategory">search by category</button>
+            </div>
+            <button class="back" onclick="backTo()" id="back">back</button>
+            <div class="deleteAll" id="deleteAll"></div>
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
